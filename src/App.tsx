@@ -48,7 +48,7 @@ function App() {
       <section className="min-h-screen flex flex-col items-center justify-center text-center p-6">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-6xl font-bold text-romance-800 mb-6">
-            I love you Samay, baby! ❤️
+            I love you Pumpkin! ❤️
           </h1>
           <p className="text-xl text-romance-600 mb-8">
             I've already made a promise to time, now I'm just waiting for the day when you’ll be
