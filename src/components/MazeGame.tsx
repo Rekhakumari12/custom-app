@@ -160,7 +160,7 @@ export const MazeGame: React.FC = () => {
       {won ? (
         <div className="text-center animate-float">
           <p className="text-xl text-romance-600 mb-4">
-            Congratulations, love! You found your way to my heart. But let's be real, you were
+            Congratulations, Baby! You found your way to my heart. But let's be real, you were
             already there. 💖 ❤️
           </p>
           <button
