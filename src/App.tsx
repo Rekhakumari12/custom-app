@@ -10,17 +10,24 @@ function App() {
   const [isMusicPlaying, setIsMusicPlaying] = useState(false)
   const audioRef = useRef(new Audio(backgroundMusic)) // Create audio instance
   useEffect(() => {
-    audioRef.current.loop = true // Enable looping
+    if (audioRef.current) {
+      audioRef.current.muted = true // Start muted
+    }
   }, [])
   const toggleMusic = () => {
+    if (!audioRef.current) {
+      audioRef.current = new Audio(backgroundMusic) // Create audio only on user interaction
+      audioRef.current.loop = true // Enable looping
+    }
+
     if (isMusicPlaying) {
       audioRef.current.pause()
     } else {
-      audioRef.current.play()
+      audioRef.current.play().catch((error) => console.log('Playback error:', error)) // Catch any errors
     }
+
     setIsMusicPlaying(!isMusicPlaying)
   }
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-pastel-pink via-pastel-peach to-pastel-lavender">
       {/* Header */}

@@ -159,7 +159,10 @@ export const MazeGame: React.FC = () => {
     <div className="flex flex-col items-center gap-4">
       {won ? (
         <div className="text-center animate-float">
-          <p className="text-xl text-romance-600 mb-4">Mera Pumpkin baby, Good job! ❤️</p>
+          <p className="text-xl text-romance-600 mb-4">
+            Congratulations, love! You found your way to my heart. But let's be real, you were
+            already there. 💖 ❤️
+          </p>
           <button
             onClick={initGame}
             className="bg-romance-500 text-white px-6 py-2 rounded-full hover:bg-romance-600 transition-colors"
