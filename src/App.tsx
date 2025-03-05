@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Heart, Music, Music2, ArrowDown } from 'lucide-react'
 import { HeartButton } from './components/HeartButton'
 import { MazeGame } from './components/MazeGame'
@@ -9,21 +9,19 @@ function App() {
   const [showMessage, setShowMessage] = useState(false)
   const [isMusicPlaying, setIsMusicPlaying] = useState(false)
   const audioRef = useRef(new Audio(backgroundMusic)) // Create audio instance
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.muted = true // Start muted
-    }
-  }, [])
+
   const toggleMusic = () => {
     if (!audioRef.current) {
-      audioRef.current = new Audio(backgroundMusic) // Create audio only on user interaction
-      audioRef.current.loop = true // Enable looping
+      audioRef.current = new Audio(backgroundMusic)
+      audioRef.current.loop = true // Loop music
     }
 
     if (isMusicPlaying) {
       audioRef.current.pause()
     } else {
-      audioRef.current.play().catch((error) => console.log('Playback error:', error)) // Catch any errors
+      audioRef.current.play().catch((error) => {
+        console.log('Playback error:', error)
+      })
     }
 
     setIsMusicPlaying(!isMusicPlaying)
@@ -91,7 +89,7 @@ function App() {
 
       {/* Footer */}
       <footer className="bg-romance-800 text-white py-8 px-6 text-center">
-        <p>Dil se banaya, sirf tumare liye 💖</p>
+        <p>Dil se banaya, sirf tumare liye 💖 umah!!</p>
       </footer>
     </div>
   )
