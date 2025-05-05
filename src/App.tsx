@@ -45,7 +45,7 @@ function App() {
       <section className="min-h-screen flex flex-col items-center justify-center text-center p-6">
         <div className="">
           <p className="text-xl text-romance-600 mb-8">
-            <Countdown day={27} month={5} year={2025} />
+            <Countdown day={25} month={5} year={2025} />
           </p>
           <div className="animate-float">
             <Heart
